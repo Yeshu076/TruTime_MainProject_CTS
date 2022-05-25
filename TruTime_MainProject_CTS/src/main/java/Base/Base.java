@@ -10,7 +10,6 @@ import java.util.concurrent.TimeUnit;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
@@ -31,7 +30,6 @@ public class Base {
 
 	public static WebDriver driver;
 	public static Properties prop;
-	JavascriptExecutor js;
 	public static WebDriverWait wait;
 	public ExtentReports report = ExtentReportManager.getReportInstance();
 	public ExtentTest logger;
@@ -40,6 +38,7 @@ public class Base {
 	public XSSFSheet sh;
 	public FileOutputStream fos;
 
+	
 	// To call different browsers using Webdriver
 	public void invokeBrowser() {
 		prop = new Properties();
