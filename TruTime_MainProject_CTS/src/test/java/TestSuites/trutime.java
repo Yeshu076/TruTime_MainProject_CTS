@@ -8,9 +8,12 @@ import org.testng.annotations.Test;
 
 import Base.Base;
 import Pages.TruTime;
+import utils.GetDates;
+import utils.compareexcels;
 
-public class trutime extends Base{
-	TruTime ha= new TruTime();
+public class trutime extends Base {
+	TruTime ha = new TruTime();
+
 	@BeforeTest
 	public void invokeBrowser() {
 		logger = report.createTest("Executing Test Cases");
@@ -25,6 +28,8 @@ public class trutime extends Base{
 		ha.openURL();
 		ha.login();
 		ha.getData();
+	    ha.getDates();
+     	ha.comparedates();
 		reportPass("All steps passed successfuly");
 	}
 
@@ -33,5 +38,6 @@ public class trutime extends Base{
 		reportPass("Browser is closed successfuly");
 		ha.endReport();
 		ha.closeBrowser();
+
 	}
 }
